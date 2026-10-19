@@ -8,7 +8,7 @@ LD = ld
 ASMFLAGS = -f elf32
 # -ffreestanding/-fno-builtin/-nostdlib/-nodefaultlibs : aucune dépendance à la libc de l'host
 CFLAGS = -m32 -ffreestanding -fno-builtin -fno-stack-protector \
-         -fno-pie -fno-pic -nodefaultlibs -Wall -Wextra
+         -fno-pie -fno-pic -nostdlib -nodefaultlibs -Wall -Wextra
 LDFLAGS = -m elf_i386 -T linker.ld -nostdlib
 
 BOOT_SRC = boot/boot.asm
